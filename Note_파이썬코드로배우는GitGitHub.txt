@@ -1,0 +1,105 @@
+
+== 실습 코드
+https://github.com/sguys99/practice-git-materials
+
+
+1장 실습 환경 구축
+-- Git for windows 설치 
+https://git-scm.com/downloads  
+
+-- 소스 트리 
+https://www.sourcetreeapp.com/
+    Registration : Bitbucket 관련 설정 항목 -> 건너뛰기
+    도구설치 : Mercurial 헤제
+
+
+== 계산기 프로그램 개발 환경 구축
+윈도우용 파이썬 설치 
+https://www.python.org/downloads/windows 
+
+path 환경 변수에 추가 
+C:\Users\JBL\AppData\Local\Programs\Python\Python310\
+C:\Users\JBL\AppData\Local\Programs\Python\Python310\Scripts\
+
+
+-- PyQt5 설치 
+(https://pypi.org/project/PyQt5 에서도 설치 가능)
+
+명령 프롬프트에서 
+pip install PyQt5 입력 
+
+확인 
+C:\Users\JBL>python
+Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from PyQt5.QtCore import QT_VERSION_STR
+>>> print (QT_VERSION_STR)
+5.15.2
+>>>
+
+
+== VS Code 설치
+https://code.visualstudio.com 
+
+python extension 설치 
+python 인터프리터 추가  ctrl+shift+p 입력하고 명령창에서 다음 입력 Python: Select interpreter 선택 
+
+
+== github 가입 
+    jblee3 (jblee3@gmail.com) 사용 
+    g..j.#....
+
+====================================================================
+== 2장 소스트리로 Git 체험하기
+-- 원격 저장소 생성
+https://github.com/jblee3
+
+
+Repositories - New - git-practice 입력 
+    Description : 'git 실습을 위한 저장소'
+    Add a README file 체크 
+    Create repository 버튼 클릭 
+
+-- 로컬 저장소 생성
+Clone : 원격 저장소의 내용 복제 생성
+Create : 개인 PC에만 로컬 저장소 생성
+Add : 개인 PC에 이미 존재하는 로컬저장소를 소스트리 인터페이스에 추가 
+
+소스트리 실행 -> 파일-복제/생성 탭 -> Clone 선택 
+https://github.com/jblee3/git-practice.git
+D:/Study/git-practice 
+클론 버튼 클릭 
+
+
+스테이지 - 커밋 
+push 
+
+push 에러 해결 방법 
+https://velog.io/@yezee/%EC%86%8C%EC%8A%A4%ED%8A%B8%EB%A6%AC-%ED%91%B8%EC%8B%9C-%EC%98%A4%EB%A5%98sourcetree-push-error
+1. github 토큰 생성
+    Developer settings ->personal access tokens-generate new token에서 생성가능
+
+
+
+2. 소스트리 원격저장소 경로 설정 
+
+소스트리 상단에 [설정-저장소 설정]으로 들어가서 해당 저장소를 선택 후 [편집]선택
+
+https://<git url>.git 형식으로 되어있는 url/경로를
+https://<유저 네임>:<토큰>@<git url>.git으로 변경해준다.
+
+git url을 github.com/jblee3/git-practice라고 할 때 다음과 같이 변경하면 된다.
+https://jblee3:<토큰>@github.com/jblee3/git-practice.git
+
+
+
+====================================================================
+== 3장 Git 동작 개념
+
+Working Directory
+Staging Area  <= git add
+Repository    <= git commit
+
+====================================================================
+====================================================================
+====================================================================
